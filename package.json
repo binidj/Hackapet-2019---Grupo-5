@@ -1,0 +1,28 @@
+{
+  "name": "servidor",
+  "version": "1.0.0",
+  "description": "api lojas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/binidj/Hackapet-2019---Grupo-5.git"
+  },
+  "keywords": [
+    "servidor",
+    "api"
+  ],
+  "author": "Antonio Barros & Vinicius Dantas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/binidj/Hackapet-2019---Grupo-5/issues"
+  },
+  "homepage": "https://github.com/binidj/Hackapet-2019---Grupo-5#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
