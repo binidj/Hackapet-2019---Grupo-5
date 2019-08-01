@@ -7,19 +7,18 @@ function createEst(estInfo) {
         loja: estInfo.loja,
         endereco: {
             rua : estInfo.endereco.rua,
-            tel: estInfo.endereco.tel,
             cidade: estInfo.endereco.cidade
         },
         email: estInfo.email,
         tipo: estInfo.tipo,
         nota: {
             notaADM: 0.0,
-            notaPub: 0.0
+            notaPub: 0.0,
+            votos: 0
         },
-        votos: 0,
         cnpj: estInfo.cnpj
     }
-    ests.push(newEst)
+    ests.push(est)
 }
 
 function getEst(loja) {
@@ -49,12 +48,12 @@ function putNota(nota,cnpj) {
         return ests.cnpj == cnpj
     })
     if (foundLoja) {
-        if(foundLoja.votos == 0) {
-            foundLoja.votos = 1
-            foundLoja.nota = nota
+        if(foundLoja.nota.votos == 0) {
+            foundLoja.nota.votos = 1
+            foundLoja.nota.notaPub = nota
         } else {
-            foundLoja.votos += 1
-            foundLoja.nota = (foundLoja.nota+nota)/2
+            foundLoja.nota.votos += 1
+            foundLoja.nota.notaPub = (foundLoja.nota.notaPub+nota)/2
         }
         return foundLoja
     }
@@ -79,7 +78,6 @@ function putDados(infoEst) {
     if (foundLoja) {
         foundLoja.loja = infoEst.loja
         foundLoja.endereco.rua= infoEst.endereco.rua
-        foundLoja.endereco.tel = infoEst.endereco.tel
         foundLoja.endereco.cidade = infoEst.endereco.cidade
         return foundLoja
     }
@@ -96,10 +94,10 @@ function delEst(cnpj) {
     return null
 }
 
-modules.export = {
+module.exports = {
     createEst,
-    getAllEst,
     getEst,
+    getAllEst,
     getEstNoteEquals,
     getTypeEst,
     putDados,
