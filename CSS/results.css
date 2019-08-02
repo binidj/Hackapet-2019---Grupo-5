@@ -83,7 +83,7 @@ body{
     overflow: hidden;
 }
 
-.btn > input {
+.btn > p {
     text-align: center;
     text-transform: uppercase;
     color: black;
