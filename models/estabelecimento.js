@@ -32,6 +32,15 @@ function getEst(cnpj) {
     return foundLoja
 }
 
+function getEstByName(loja) {
+    let foundLoja = ests.filter(function(est) {
+        return est.loja.includes(loja)
+    })
+    return foundLoja
+}
+
+
+
 function getTypeEst(tipo) {
     let foundLoja = ests.filter(function(est) {
         return est.tipo == tipo
@@ -114,6 +123,7 @@ function delEst(cnpj) {
 module.exports = {
     createEst,
     getEst,
+    getEstByName,
     getAllEst,
     getEstNoteEquals,
     getTypeEst,

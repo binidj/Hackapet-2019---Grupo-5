@@ -45,6 +45,16 @@ router .get("/est/:estCNPJ", function(req,res)  {
     }
 })
 
+router .get("/est/byname/:estName", function(req,res)  {
+    let name = req.params.estName
+    let foundEst = estModel.getEstByName(name)
+    if (foundEst.length != 0) {
+        res.send(foundEst)
+    } else {
+        res.status(404).send({message: "Nenhum estabelecimento encontrado"})
+    }
+})
+
 router .put("/est/:estCNPJ/nota",function(req,res) {
     let cnpj = req.params.estCNPJ
     let nota = req.body.nota
