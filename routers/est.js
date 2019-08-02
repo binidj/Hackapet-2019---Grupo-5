@@ -4,7 +4,7 @@ let estModel = require('../models/estabelecimento.js')
 
 router .post("/est", function(req,res) {
     let data = req.body
-    if (data.loja && data.endereco.rua && data.endereco.cidade && data.email && data.tipo && data.cnpj) {
+    if (data.loja && data.endereco.localizacao && data.endereco.cidade && data.valor && data.estabelecimento && data.email && data.tipo && data.cnpj) {
         let again = estModel.findEst(data.cnpj)
         if (!again) {
             let newEst = estModel.createEst(data)
@@ -21,8 +21,16 @@ router .post("/est", function(req,res) {
 router .get("/est", function(req,res) {
     let option = req.query.option
     let note = req.query.note
+    let tipo = req.query.tipo
     if (option == 'visao' || option == 'audicao' || option == 'idoso' || option == 'cadeirante') {
         ests = estModel.getTypeEst(option)
+        if (tipo == 'restaurante' || tipo == 'museu' || tipo == 'escola' || tipo == 'parque') {
+           ests = estModel.getEstType2(option,tipo)
+        } if (note >= 0) {
+            ests = estModel.getEstNoteEquals(note)
+        }
+    } else if (tipo == 'restaurante' || tipo == 'museu' || tipo == 'escola' || tipo == 'parque') {
+        ests = estModel.getEstType(tipo)
         if (note >= 0) {
             ests = estModel.getEstNoteEquals(note)
         }
@@ -80,7 +88,7 @@ router .put("/est/:estCNPJ/notaADM",function(req,res) {
 router .put("/est/:estCNPJ", function(req,res) {
     let cnpj = req.params.estCNPJ
     let infoEst = req.body
-    if (infoEst.loja || infoEst.endereco.rua || infoEst.endereco.cidade) {
+    if (infoEst.loja || infoEst.endereco.localizacao || infoEst.endereco.cidade || infoEst.valor) {
         let foundLoja = estModel.putDados(infoEst,cnpj)
         if (foundLoja.length != 0) {
             res.send(foundLoja)

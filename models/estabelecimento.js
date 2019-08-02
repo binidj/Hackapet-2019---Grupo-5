@@ -9,11 +9,13 @@ function createEst(estInfo) {
     let est = {
         loja: estInfo.loja,
         endereco: {
-            rua : estInfo.endereco.rua,
+            localizacao : estInfo.endereco.localizacao,
             cidade: estInfo.endereco.cidade
         },
         email: estInfo.email,
         tipo: estInfo.tipo,
+        estabelecimento: estInfo.estabelecimento,
+        valor: estInfo.valor,
         nota: {
             votos: 0,
             notaADM: 0.0,
@@ -39,7 +41,19 @@ function getEstByName(loja) {
     return foundLoja
 }
 
+function getEstType(estabelecimento) {
+    let foundLoja = ests.filter(function(est) {
+        return est.estabelecimento == estabelecimento
+    })
+    return foundLoja
+}
 
+function getEstType2(tipo, estabelecimento) {
+    let foundLoja = ests.filter(function(est) {
+        return (est.estabelecimento == estabelecimento && est.tipo == tipo)
+    })
+    return foundLoja
+}
 
 function getTypeEst(tipo) {
     let foundLoja = ests.filter(function(est) {
@@ -95,8 +109,9 @@ function putDados(infoEst,cnpj) {
     })
     if (foundLoja.length != 0) {
         foundLoja[0].loja = infoEst.loja
-        foundLoja[0].endereco.rua= infoEst.endereco.rua
+        foundLoja[0].endereco.localizacao= infoEst.endereco.localizacao
         foundLoja[0].endereco.cidade = infoEst.endereco.cidade
+        foundLoja[0].valor = infoEst.valor
         return foundLoja
     }
     return null
@@ -123,7 +138,9 @@ function delEst(cnpj) {
 module.exports = {
     createEst,
     getEst,
+    getEstType,
     getEstByName,
+    getEstType2,
     getAllEst,
     getEstNoteEquals,
     getTypeEst,
