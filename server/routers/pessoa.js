@@ -18,7 +18,6 @@ router.get("/users/:usersId", async function (req, res) {
     let id = req.params.usersId
     try {
         let resultPer = await pessoaModel.getPersById(id)
-
         if (resultPer) {
             res.send(resultPer)
         } else res.status(404).send({message: "Pessoa não encontrada"})
