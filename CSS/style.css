@@ -1,5 +1,6 @@
 body{
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Muli', sans-serif;
 }
 /*grid 960px*/
 .line{
@@ -53,6 +54,27 @@ body{
     bottom: 10px;
     width: 55%;
 }
-.pos{
-    float: left;
+.aux{
+    height: 36%;
+}
+#estabelecimento{
+    width: 240px;
+    background: white;
+}
+a{
+    text-decoration : none;
+}
+input[type="submit"]{
+    padding: auto;
+    text-decoration: none;
+}
+#submit{
+    font-family: 'Muli', sans-serif;
+    background: transparent;
+    border: transparent;
+    font-size: 32px;
+}
+p #submit a{
+    font-family: 'Muli', sans-serif;
+    font-color: black;
 }

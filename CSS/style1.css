@@ -55,7 +55,7 @@ input[type=text]{
 }
 
 #upper-side #bottomline{
-    padding: 32px;
+    padding: 0%;
     /*background-image: linear-gradient(#b3e6ff,white);*/
 }
 
@@ -108,13 +108,6 @@ input[type=text]{
 .btn-d:hover:before{
     left: 0;
 }
-
 .btn:hover p{
     color: white;
-}
-
-.aux{
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
 }

@@ -3,27 +3,39 @@
     <head>
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/style1.css" />
+        <link rel="stylesheet" href="css/styleLupa.css" />
         <link rel="stylesheet" href="css/results.css">
+        <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+
         <meta charset="utf-8" />
         <script src="firstscript.js" type="text/javascript"></script>
     </head>
 
     <body>
+        
         <section id="upper-side">
             <div class="navbar">
                 <a href="search.html"><img src="img/justica.png"/></a>
             </div>
-        
-        <div class="row">
-            <h1></h1>
-        </div>
-        <footer id="bottomline">
             
-        </footer>
+            <div class="row">
+                <h1><div id="search-box">
+                        <form action="" method="GET" class="forms"> 
+                            <ul>
+                                <li><img src="img/lupa.png" alt="lupa de pesquisa" class="lupa"></li>
+                                <li><input type="text" id="pesquisa" name="pesquisa" placeholder="  Algum local em mente?"> </li>
+                            </ul>
+                        </form>
+                    </div>
+                    </h1>
+            </div>
+            <footer id="bottomline">
+                
+            </footer>
         </section>
         <div class="line">
-            <div class="main pos">
-                <form method="GET"> 
+            <div class="main pos aux">
+                <form method="GET" id="form1"> 
                     <div class="line">
                         <div class="condicao">
                             <ul> 
@@ -85,13 +97,10 @@
                             </ul>
                         </div>
                     </div>
-                        <div class="line">
-                            <input id="estabelecimento" type="text" placeholder="Vai pra onde, bença?" />
-                        </div>
                         <div class="aux">
                             <div class="wrapper">
                                 <div class="btn btn-d">
-                                    <p><a onclick="doSearch(event)" type="submit" value="send">Send</a></p>
+                                    <p><button id="submit" type="submit" name="Procurar" form="form1" value="Procurar"><a href="results.html"  >Procurar</a></button></p> <!--onclick="doSearch(event)" dentro do button-->
                                 </div>
                             </div>
                         </div>

@@ -11,7 +11,6 @@ body{
 }
 #upper-side{
     background-color: #b3e6ff;
-
 }
 
 .navbar{    
@@ -23,6 +22,7 @@ body{
 
 .navbar a {
     display: block;
+    padding-bottom: 0px;
 }
 
 .navbar img{
@@ -50,7 +50,7 @@ body{
     color: white;
 }
 #upper-side footer{
-    padding: 10px;
+    padding: 20px;
     /*background-image: linear-gradient(#b3e6ff,white);*/
 }
 
@@ -110,7 +110,7 @@ body{
     left: 0;
 }
 
-.btn:hover p{
+.btn:hover p{background-attachment: fixed;
     color: white;
 }
 
