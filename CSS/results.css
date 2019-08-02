@@ -23,8 +23,6 @@ body{
 
 .navbar a {
     display: block;
-    margin-left: auto;
-    margin-right: auto
 }
 
 .navbar img{
@@ -33,20 +31,20 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
-
+    padding: 10px;
 }
 
 .row{
     opacity: 0.3;
     margin-top:0;
-    background: url(show-bar.png);
+    background: url(../img/show-bar.png);
     background-repeat: repeat-x;
     padding: 70px;
 }
 
 .row h1{
     margin-top: 250px;
-    margin-bottom: 0;
+    margin-bottom: 0px;
     text-align: center;
     font-size: 50px;
     color: white;
@@ -114,7 +112,6 @@ body{
 
 .btn:hover p{
     color: white;
-
 }
 
 /*---------------------------------------conteúdo------------------------------------------*/
