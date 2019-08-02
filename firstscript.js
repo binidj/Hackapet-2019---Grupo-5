@@ -48,12 +48,13 @@ function doSearch(event) {
                 count--
                 responses.push(data)
                 if (count == 0) {
-                    
                     console.log(responses)
-                }
-                
+                    localStorage.setItem("responses", responses);
+                    window.location.href = "results.html"
+                }                
         });
         count++
     }
 }
 
+let responses = localStorage.getItem("responses")

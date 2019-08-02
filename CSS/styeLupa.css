@@ -1,0 +1,23 @@
+#pesquisa{
+    width: 160px;
+    height: 25px;
+    border-radius: 15px;
+    border: 2px solid black;
+    transition: all 0.7s ease-out;
+    background-color: white;
+}
+#pesquisa:focus { 
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 230px;
+    z-index: 1;
+    transition: width 0.7s ease-in;
+  }
+
+::placeholder{
+    color: black;
+    font-family: 'Muli',sans-serif;
+}
+.lupa {
+    width: 12.5px;
+}
