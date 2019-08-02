@@ -70,10 +70,101 @@ let ests = [
             notaSomatorio: 0.0,
             notaPub: 0.0
         },
-        cnpj: 402
+        cnpj: 403215
+},
+{
+    loja: "Museu do amor",
+        endereco: {
+            localizacao : "Rua josé aníbal",
+            cidade: "recife"
+        },
+        email: "andre@gmail.com",
+        tipo: "idoso",
+        estabelecimento: "museu",
+        valor: "50",
+        nota: {
+            votos: 0,
+            notaADM: 0.0,
+            notaSomatorio: 0.0,
+            notaPub: 0.0
+        },
+        cnpj: 40321
+},
+{
+    loja: "Escola amor",
+        endereco: {
+            localizacao : "Rua josé aníbal",
+            cidade: "recife"
+        },
+        email: "andre@gmail.com",
+        tipo: "idoso",
+        estabelecimento: "escola",
+        valor: "50",
+        nota: {
+            votos: 0,
+            notaADM: 0.0,
+            notaSomatorio: 0.0,
+            notaPub: 0.0
+        },
+        cnpj: 40344
+},
+{
+    loja: "Parque dos idosos",
+        endereco: {
+            localizacao : "Rua josé aníbal",
+            cidade: "recife"
+        },
+        email: "andre@gmail.com",
+        tipo: "idoso",
+        estabelecimento: "parque",
+        valor: "50",
+        nota: {
+            votos: 0,
+            notaADM: 0.0,
+            notaSomatorio: 0.0,
+            notaPub: 0.0
+        },
+        cnpj: 40232
+},
+{
+    loja: "Universidade do amor",
+        endereco: {
+            localizacao : "Rua josé aníbal",
+            cidade: "recife"
+        },
+        email: "andre@gmail.com",
+        tipo: "audicao",
+        estabelecimento: "escola",
+        valor: "50",
+        nota: {
+            votos: 0,
+            notaADM: 0.0,
+            notaSomatorio: 0.0,
+            notaPub: 0.0
+        },
+        cnpj: 4056
+},
+{
+    loja: "Parque dos deficientes visuais",
+        endereco: {
+            localizacao : "Rua josé aníbal",
+            cidade: "recife"
+        },
+        email: "andre@gmail.com",
+        tipo: "visao",
+        estabelecimento: "parque",
+        valor: "50",
+        nota: {
+            votos: 0,
+            notaADM: 0.0,
+            notaSomatorio: 0.0,
+            notaPub: 0.0
+        },
+        cnpj: 4010
 }
-]
 
+]
+    
 function media(notaGeral,votos) {
     return (notaGeral)/votos
 }

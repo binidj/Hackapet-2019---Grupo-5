@@ -1,3 +1,6 @@
+#search-box{
+    padding: 10px;
+}
 #pesquisa{
     width: 160px;
     height: 25px;
@@ -5,16 +8,21 @@
     border: 2px solid black;
     transition: all 0.7s ease-out;
     background-color: white;
+    padding: 10px;
+    font-size: 20px;
 }
+
 #pesquisa:focus { 
     border: 2px solid black;
     border-radius: 15px;
     width: 230px;
     z-index: 1;
     transition: width 0.7s ease-in;
-  }
+ }
 
 ::placeholder{
+    margin-right: auto;
+    margin-left: auto;
     color: black;
     font-family: 'Muli',sans-serif;
 }

@@ -16,18 +16,22 @@ function doSearch(event) {
     let count = 0
     if(document.getElementById("visual").checked){
         url.push('http://localhost:3000/est?option=visao&tipo='+lugar)
+        let deficiencia = "visual"
     }
     
     if(document.getElementById("auditivo").checked){
         url.push('http://localhost:3000/est?option=audicao&tipo='+lugar)
+        let deficiencia = "audicao"
     }
 
     if(document.getElementById("fisico").checked){
         url.push('http://localhost:3000/est?option=cadeirante&tipo='+lugar)
+        let deficiencia = "fisico"
     }
 
     if(document.getElementById("idoso").checked){
         url.push('http://localhost:3000/est?option=idoso&tipo='+lugar)
+        let deficiencia = "idoso"
     }
 
     if (url.length == 0) {
@@ -44,17 +48,17 @@ function doSearch(event) {
                 'Content-Type': 'application/json'
             },
         }).then(res => res.json())
-            .then(/*Objeto que vai ser usado */ data =>  {
+            .then( data =>  {
                 count--
                 responses.push(data)
                 if (count == 0) {
-                    console.log(responses)
-                    localStorage.setItem("responses", responses);
-                    window.location.href = "results.html"
-                }                
+                    localStorage.setItem("responses", JSON.stringify(responses));
+                    localStorage.setItem("quantidade", JSON.stringify(responses.length));
+                    window.location.href = "results.html";
+                }
         });
         count++
     }
 }
 
-let responses = localStorage.getItem("responses")
+
