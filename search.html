@@ -4,29 +4,79 @@
         <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/style1.css" />
+        <link rel="stylesheet" href="css/styleLupa.css" />
         <link rel="stylesheet" href="css/results.css">
+        <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+
         <meta charset="utf-8" />
         <script src="firstscript.js" type="text/javascript"></script>
         <title>Acessibilidade</title>
     </head>
 
     <body>
+        
         <section id="upper-side">
             <div class="navbar">
                 <a href="search.html"><img src="img/justica.png"/></a>
             </div>
-        
-        <div class="row">
-            <h1></h1>
-        </div>
-        <footer id="bottomline">
             
-        </footer>
+            <div class="row">
+                <h1><div id="search-box">
+                        <form action="" method="GET" class="forms"> 
+                            <ul>
+                                <li><img src="img/lupa.png" alt="lupa de pesquisa" class="lupa"></li>
+                                <li><input type="text" id="pesquisa" name="pesquisa" placeholder="  Algum local em mente?"> </li>
+                            </ul>
+                        </form>
+                    </div>
+                    </h1>
+            </div>
+            <footer id="bottomline">
+                
+            </footer>
         </section>
+<<<<<<< HEAD
+        <div class="line">
+            <div class="main pos aux">
+                <form method="GET" id="form1"> 
+                    <div class="line">
+                        <div class="condicao">
+                            <ul> 
+                                <li>
+                                    <label for="visual">
+                                        <input type="checkbox" name="visual" id="visual" value="visual">
+                                        <img class="markbox" src="img/visual.png" alt="deficiente visual" title="Deficiente Visual" />
+                                    </label>
+                                </li>
+                                <li>   
+                                    <label for="auditivo">
+                                        <input type="checkbox" name="auditivo" id="auditivo" value="auditivo">
+                                        <img class="markbox" src="img/orelha.png" alt="deficiente auditivo" title="Deficiente Auditivo" />
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="fisico">
+                                        <input type="checkbox" name="fisico" id="fisico" value="fisico">
+                                        <img class="markbox" src="img/fisico.png" alt="deficiente físico" title="Deficiente Físico" />
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="idoso">
+                                        <input type="checkbox" name="idoso" id="idoso" value="idoso">
+                                        <img class="markbox" src="img/idoso.png" alt="idoso" title="Idoso" />
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="local">
+=======
         <section id="search">
             <div class="line">
                 <div class="main pos">
                     <form method="GET"> 
+>>>>>>> 0f5d0c01aaa8b645261303556648ee36b40cead2
                         <div class="line">
                             <div class="condicao">
                                 <ul> 
@@ -57,6 +107,13 @@
                                 </ul>
                             </div>
                         </div>
+<<<<<<< HEAD
+                    </div>
+                        <div class="aux">
+                            <div class="wrapper">
+                                <div class="btn btn-d">
+                                    <p><button id="submit" type="submit" name="Procurar" form="form1" value="Procurar"><a href="results.html"  >Procurar</a></button></p> <!--onclick="doSearch(event)" dentro do button-->
+=======
 
                         <div class="local">
                             <div class="line">
@@ -96,6 +153,7 @@
                                     <div class="btn btn-d">
                                         <p><a onclick="doSearch(event)" type="submit" value="send" href="results.html" target="blank">Procurar</a></p>
                                     </div>
+>>>>>>> 0f5d0c01aaa8b645261303556648ee36b40cead2
                                 </div>
                             </div>
                     </form>

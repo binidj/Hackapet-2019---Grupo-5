@@ -1,4 +1,8 @@
 body{
+<<<<<<< HEAD
+    /*font-family: 'Roboto', sans-serif;*/
+=======
+>>>>>>> 0f5d0c01aaa8b645261303556648ee36b40cead2
     font-family: 'Muli', sans-serif;
 }
 /*grid 960px*/
@@ -53,6 +57,27 @@ body{
     bottom: 10px;
     width: 55%;
 }
-.pos{
-    float: left;
+.aux{
+    height: 36%;
+}
+#estabelecimento{
+    width: 240px;
+    background: white;
+}
+a{
+    text-decoration : none;
+}
+input[type="submit"]{
+    padding: auto;
+    text-decoration: none;
+}
+#submit{
+    font-family: 'Muli', sans-serif;
+    background: transparent;
+    border: transparent;
+    font-size: 32px;
+}
+p #submit a{
+    font-family: 'Muli', sans-serif;
+    font-color: black;
 }
