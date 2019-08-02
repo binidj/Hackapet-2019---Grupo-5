@@ -1,0 +1,71 @@
+ul{
+    list-style: none;
+    
+}
+li{
+    margin: 16px;
+    margin-right: 20px;
+}
+img{
+    width: 80px;
+}
+label > input{
+    visibility: hidden;
+}
+img{ 
+    cursor:pointer;
+    border:4px solid #EEE;
+    border-radius:15px;
+    padding:10px;
+}
+label > input:checked + img{ 
+    border:4px solid #6cf;
+}
+label > input{ 
+    visibility: hidden; 
+}
+label > input + img{ 
+    cursor: pointer ;
+    border:4px solid snow;
+    border-radius:15px;
+    padding:20px;
+}
+li{
+    display: inline-block;
+}
+img{
+    width: 80px;
+}
+input[type=submit]{
+    width: 80px;
+    height: 40px;
+    background: white;
+    border-radius: 50px;
+    border-color: #6cf;
+    cursor: pointer;
+    padding: 8px;
+    outline: none;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    display : block; 
+
+
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4;
+}
+
+  
+input[type=submit]:hover {
+background-color: #6cf; /* Green */
+color: white;
+}
+input[type=text]{
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+.local img{
+    width: 80px;
+}
