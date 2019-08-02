@@ -46,7 +46,8 @@ function doSearch(event) {
         }).then(res => res.json())
             .then(/*Objeto que vai ser usado */ data =>  {
                 console.log(data)
-        // quando a resposta chegar do servidor
+                responses.push(data)
+                console.log(responses)
         });
     }
 }
