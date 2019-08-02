@@ -1,6 +1,7 @@
 let axios = require('axios')
 
 let pers = []
+let logged = []
 let persId = 0
 
 function getAllPers () {
@@ -59,33 +60,60 @@ function findPersById (id) {
 }
 
 function getPersById (id) {
-    let foundPer = pers.find(function (per){
-        per.id == id
-    })
+    let foundPer = findPersById(id)
+
     if (foundPer) {
         return foundPer
     } else return null
 }
 
-function updatePer (id, perInfo) {
+function changePass (id, newPass) {
     let toBeUpdated = pers.find(function (per) {
         per.id == id
     })
     if (toBeUpdated) {
-        toBeUpdated.name = perInfo.name
-        toBeUpdated.email = perInfo.email
-        toBeUpdated.password = perInfo.password
+        toBeUpdated.password = newPass
+    } else return null
+}
+
+function changeName (id, newName) {
+    let toBeUpdated = pers.find(function (per) {
+        per.id == id
+    })
+    if (toBeUpdated) {
+        toBeUpdated.name = newName
+    } else return null
+}
+
+function login (body) {
+    let foundPer = findPersById(body.id)
+    if (foundPer) {
+        //crypto
+        logged.push(foundPer)
+    } else return
+}
+
+function logout (id) {
+    let perIndex = logged.findIndex(function (per) {
+        return per.id == id
+    })
+
+    if (perIndex != -1) {
+        return logged.splice(perIndex, 1)
     } else return null
 }
 
 module.exports = {
     findPersByName,
+    changePass,
     getPersById,
+    changeName,
     findPersById,
     getAllPers,
     getPersByAge,
     getPersByName,
-    updatePer,
     createPer,
-    deletePer
+    deletePer,
+    login,
+    logout
 }

@@ -2,7 +2,7 @@ let express = require("express")
 let router = express.Router()
 let pessoaModel = require("../models/pessoa")
 
-router.get("/prs", function (req, res) {
+router.get("/users", function (req, res) {
     let ageFilter = req.query.idade
     try {
         if (ageFilter) {
@@ -14,8 +14,8 @@ router.get("/prs", function (req, res) {
     
 })
 
-router.get("/prs/:prsId", async function (req, res) {
-    let id = req.params.perId
+router.get("/users/:usersId", async function (req, res) {
+    let id = req.params.usersId
     try {
         let resultPer = await pessoaModel.getPersById(id)
 
@@ -27,10 +27,10 @@ router.get("/prs/:prsId", async function (req, res) {
     }
 })
 
-router.post("/prs", async function (req, res) {
+router.post("/users", async function (req, res) {
     let body = req.body
     try {
-        if (body.nome && body.cpf && body.email && body.idade) {
+        if (body.nome && body.cpf && body.email && body.idade && body.password) {
             let newPer = await pessoaModel.createPer(body)
             res.send(newPer)
         }  else res.status(400).send({message: "Pessoa invalida"})
@@ -39,10 +39,11 @@ router.post("/prs", async function (req, res) {
     }
 })
 
-router.put("/prs/:prsId", async function (req, res) {
-    let id = req.params.perId
+router.put("/users/:usersId/changePassword", async function (req, res) {
+    let id = req.params.usersId
+    let newPass = req.body.newPass
     try {
-        let resultPer = await pessoaModel.getPersById(id)
+        let resultPer = await pessoaModel.changePass(id, newPass)
 
         if (resultPer) {
             res.send(resultPer)
@@ -52,9 +53,48 @@ router.put("/prs/:prsId", async function (req, res) {
     }
 })
 
-router.delete("/prs/:prsId", async function (req, res) {
+router.put("/users/:usersId/changeName", async function (req, res) {
+    let id = req.params.usersId
+    let newName = req.body.newName
     try {
-        let id = req.params.perId
+        let resultPer = await pessoaModel.changeName(id, newName)
+
+        if (resultPer) {
+            res.send(resultPer)
+        } else res.status(404).send({message: "Pessoa não encontrada"})
+    } catch (err) {
+        res.status(500).send({message: "server error"})
+    }
+})
+
+router.post("/login", async function (req, res) {
+    let body = req.body
+    try {
+        let resultPer = await pessoaModel.login(body)
+
+        if (resultPer) {
+            res.send(resultPer)
+        } else res.status(404).send({message: "Pessoa não encontrada"})
+    } catch (err) {
+        res.status(500).send({message: "server error"})
+    }
+})
+
+router.delete("/login/:usersId", async function (req, res) {
+    try {
+        let id = req.params.usersId
+        let deletePer = await pessoaModel.logout(id)
+        if (deletePer) {
+            res.send(deletePer)
+        } else res.status(404).send({message: "Pessoa não encontrada"})
+    } catch (err) {
+        res.status(500).send({message: "server error"})
+    }
+})
+
+router.delete("/users/:usersId", async function (req, res) {
+    try {
+        let id = req.params.usersId
         let deletePer = await pessoaModel.deletePer(id)
         if (deletePer) {
             res.send(deletePer)
