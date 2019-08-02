@@ -10,14 +10,14 @@ router.get("/users", function (req, res) {
         } else res.send(pessoaModel.getAllPers())
     } catch (err) {
         res.status(500).send({message: "server error"})
-    }
-    
+    }  
 })
 
 router.get("/users/:usersId", async function (req, res) {
     let id = req.params.usersId
     try {
         let resultPer = await pessoaModel.getPersById(id)
+
         if (resultPer) {
             res.send(resultPer)
         } else res.status(404).send({message: "Pessoa não encontrada"})
@@ -30,7 +30,7 @@ router.post("/users", async function (req, res) {
     let body = req.body
     try {
         if (body.nome && body.cpf && body.email && body.idade && body.password) {
-            if (!pessoaModel.getPersByCpf(body.cpf).cpf && !pessoaModel.getPersByEmail(body.email).email) {
+            if (pessoaModel.getPersByCpf(body.cpf) == null && pessoaModel.getPersByEmail(body.email) == null) {
                 let newPer = await pessoaModel.createPer(body)
                 res.send(newPer)
             } else res.status(403).send({message: "Pessoa já cadastrada"})
@@ -73,12 +73,13 @@ router.post("/login", async function (req, res) {
     try {
         let resultPer = await pessoaModel.getPersByEmail(body.email)
         if (resultPer) {
-            let check = login(body.password, resultPer.salt, resultPer.hash)
+            let check = pessoaModel.login(body.password, resultPer.salt, resultPer.hash, resultPer)
             if (check) {
                 res.send(resultPer)
             } else return res.status(403).send({message: "Usuário ou senha incorretos"})
         } else res.status(404).send({message: "Pessoa não encontrada"})
     } catch (err) {
+        console.log(err)
         res.status(500).send({message: "server error"})
     }
 })

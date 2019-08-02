@@ -21,6 +21,7 @@ function createPer(perInfo) {
     newPer.salt = genSalt.salt
     newPer.hash = genSalt.passwordData
     pers.push(newPer)
+    return newPer
 }
 
 function deletePer (id) {
@@ -35,7 +36,7 @@ function deletePer (id) {
 
 function findPersByName (nome) {
     return pers.find(function(per) {
-        per.nome == nome
+        return per.nome == nome
     })
 }
 
@@ -49,7 +50,7 @@ function getPersByName(nome) {
 
 function getPersByAge (age) {
     let foundPer = pers.filter(function (per){
-        per.age == age
+        return per.age == age
     })
     if (foundPer) {
         return foundPer
@@ -58,7 +59,7 @@ function getPersByAge (age) {
 
 function findPersById (id) {
     return pers.find(function(per) {
-        per.id == id
+        return per.id == id
     })
 }
 
@@ -72,7 +73,7 @@ function getPersById (id) {
 
 function findPersByCpf (cpf) {
     return pers.find(function(per) {
-        per.cpf == cpf
+        return per.cpf == cpf
     })
 }
 
@@ -86,7 +87,7 @@ function getPersByCpf (cpf) {
 
 function findPersByEmail (email) {
     return pers.find(function(per) {
-        per.email == email
+        return per.email == email
     })
 }
 
@@ -100,26 +101,29 @@ function getPersByEmail (email) {
 
 function changePass (id, newPass) {
     let toBeUpdated = pers.find(function (per) {
-        per.id == id
+        return per.id == id
     })
     if (toBeUpdated) {
         toBeUpdated.password = newPass
+        return toBeUpdated
     } else return null
 }
 
 function changeName (id, newName) {
     let toBeUpdated = pers.find(function (per) {
-        per.id == id
+        return per.id == id
     })
     if (toBeUpdated) {
         toBeUpdated.name = newName
+        return toBeUpdated
     } else return null
 }
 
-function login (password, salt, hash) {
+function login (password, salt, hash, resultPer) {
     let verify = sha512(password, salt)
     if (verify.passwordHash == hash) { 
-        logged.push(foundPer)
+        logged.push(resultPer)
+        return resultPer
     } else return null
 }
 
@@ -150,7 +154,7 @@ function sha512 (password, salt){
 function saltPassword (userPassword) {
     let salt = randomString(16)
     let passwordData = sha512(userPassword, salt)
-    return {salt: salt, passwordData: passwordData}
+    return {salt: salt, passwordData: passwordData.passwordHash}
 }
 
 module.exports = {
