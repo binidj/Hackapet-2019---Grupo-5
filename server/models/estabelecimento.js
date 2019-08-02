@@ -1,7 +1,7 @@
 let axios = require('axios')
 let ests = [
     {
-    loja: "loja amor",
+    loja: "Restaurante amoroso",
         endereco: {
             localizacao : "Rua josé aníbal",
             cidade: "recife"
@@ -19,7 +19,7 @@ let ests = [
         cnpj: 400
 },
 {
-    loja: "loja amor",
+    loja: "Restaurante de marcos",
         endereco: {
             localizacao : "Rua josé aníbal",
             cidade: "recife"
@@ -37,7 +37,7 @@ let ests = [
         cnpj: 401
 },
 {
-    loja: "loja amor",
+    loja: "Restaurante do amor",
         endereco: {
             localizacao : "Rua josé aníbal",
             cidade: "recife"
@@ -55,7 +55,7 @@ let ests = [
         cnpj: 402
 },
 {
-    loja: "loja amor",
+    loja: "Restaurante Gucci",
         endereco: {
             localizacao : "Rua josé aníbal",
             cidade: "recife"
@@ -93,7 +93,7 @@ let ests = [
 {
     loja: "Escola amor",
         endereco: {
-            localizacao : "Rua josé aníbal",
+            localizacao : "Rua josé Martelo",
             cidade: "recife"
         },
         email: "andre@gmail.com",
@@ -111,13 +111,13 @@ let ests = [
 {
     loja: "Parque dos idosos",
         endereco: {
-            localizacao : "Rua josé aníbal",
+            localizacao : "Rua josé Transmarco",
             cidade: "recife"
         },
         email: "andre@gmail.com",
         tipo: "idoso",
         estabelecimento: "parque",
-        valor: "50",
+        valor: "15",
         nota: {
             votos: 0,
             notaADM: 0.0,
@@ -147,18 +147,18 @@ let ests = [
 {
     loja: "Parque dos deficientes visuais",
         endereco: {
-            localizacao : "Rua josé aníbal",
+            localizacao : "Rua Marcelo Veloso",
             cidade: "recife"
         },
         email: "andre@gmail.com",
         tipo: "visao",
         estabelecimento: "parque",
-        valor: "50",
+        valor: "10",
         nota: {
             votos: 0,
             notaADM: 0.0,
             notaSomatorio: 0.0,
-            notaPub: 0.0
+            notaPub: 10
         },
         cnpj: 4010
 }
