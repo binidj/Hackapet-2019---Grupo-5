@@ -8,15 +8,15 @@ li{
 }
 img{
     width: 80px;
+    padding:10px;
 }
 label > input{
     visibility: hidden;
 }
-img{ 
+img .markbox{ 
     cursor:pointer;
     border:4px solid #EEE;
     border-radius:15px;
-    padding:10px;
 }
 label > input:checked + img{ 
     border:4px solid #6cf;
@@ -33,14 +33,13 @@ label > input + img{
 li{
     display: inline-block;
 }
-img{
-    width: 80px;
-}
 input[type=submit]{
     text-decoration: none;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
 }
-
-  
 input[type=submit]:hover {
 background-color: #6cf; /* Green */
 color: white;
@@ -55,6 +54,11 @@ input[type=text]{
     width: 80px;
 }
 
+#upper-side #bottomline{
+    padding: 32px;
+    /*background-image: linear-gradient(#b3e6ff,white);*/
+}
+
 .wrapper{
     display: inline;
     padding: 0 10px;
@@ -63,7 +67,6 @@ input[type=text]{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: red 2px solid;
 }
 .btn{
     width: 200px;
@@ -108,5 +111,10 @@ input[type=text]{
 
 .btn:hover p{
     color: white;
+}
 
+.aux{
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
 }

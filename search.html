@@ -9,6 +9,18 @@
     </head>
 
     <body>
+        <section id="upper-side">
+            <div class="navbar">
+                <a href="search.html"><img src="img/justica.png"/></a>
+            </div>
+        
+        <div class="row">
+            <h1></h1>
+        </div>
+        <footer id="bottomline">
+            
+        </footer>
+        </section>
         <div class="line">
             <div class="main pos">
                 <form method="GET"> 
@@ -18,25 +30,25 @@
                                 <li>
                                     <label for="visual">
                                         <input type="checkbox" name="visual" id="visual" value="visual">
-                                        <img class="cara" src="img/visual.png" alt="deficiente visual" title="Deficiente Visual" />
+                                        <img class="markbox" src="img/visual.png" alt="deficiente visual" title="Deficiente Visual" />
                                     </label>
                                 </li>
                                 <li>   
                                     <label for="auditivo">
                                         <input type="checkbox" name="auditivo" id="auditivo" value="auditivo">
-                                        <img class="cara" src="img/orelha.png" alt="deficiente auditivo" title="Deficiente Auditivo" />
+                                        <img class="markbox" src="img/orelha.png" alt="deficiente auditivo" title="Deficiente Auditivo" />
                                     </label>
                                 </li>
                                 <li>
                                     <label for="fisico">
                                         <input type="checkbox" name="fisico" id="fisico" value="fisico">
-                                        <img class="cara" src="img/fisico.png" alt="deficientefísico" title="Deficiente Físico" />
+                                        <img class="markbox" src="img/fisico.png" alt="deficiente físico" title="Deficiente Físico" />
                                     </label>
                                 </li>
                                 <li>
                                     <label for="idoso">
                                         <input type="checkbox" name="idoso" id="idoso" value="idoso">
-                                        <img class="cara" src="img/idoso.png" alt="idoso" title="Idoso" />
+                                        <img class="markbox" src="img/idoso.png" alt="idoso" title="Idoso" />
                                     </label>
                                 </li>
                             </ul>
@@ -49,25 +61,25 @@
                                 <li>
                                     <label>
                                         <input type="radio" name="option" id="restaurante" value="restaurante" title="restaurante" />
-                                        <img class="restaurante" src="img/restaurante.png" alt="restaurante" title="Restaurante" />
+                                        <img class="markbox" src="img/restaurante.png" alt="restaurante" title="Restaurante" />
                                     </label>
                                 </li>
                                 <li>
                                     <label>
                                         <input type="radio" name="option" id="escola" value="escola" />
-                                        <img class="escola" src="img/escola.png" alt="escola" title="Escola" />
+                                        <img class="markbox" src="img/escola.png" alt="escola" title="Escola" />
                                     </label>
                                 </li>
                                 <li>
                                     <label>
                                         <input type="radio" name="option" id="parque" value="parque" />
-                                        <img class="parque" src="img/parque.png" alt="parque" title="Parque" />
+                                        <img class="markbox" src="img/parque.png" alt="parque" title="Parque" />
                                     </label>
                                 </li>
                                 <li>
                                     <label>
                                         <input type="radio" name="option" id="museu" value="museu" />
-                                        <img class="parque" src="img/museu.png" alt="Museu" title="Museu" />
+                                        <img class="markbox" src="img/museu.png" alt="Museu" title="Museu" />
                                     </label>
                                 </li>
                             </ul>
@@ -76,9 +88,11 @@
                         <div class="line">
                             <input id="estabelecimento" type="text" placeholder="Vai pra onde, bença?" />
                         </div>
-                        <div class="wrapper">
-                            <div class="btn btn-d">
-                                <p><a onclick="doSearch(event)" type="submit" value="send">Send</a></p>
+                        <div class="aux">
+                            <div class="wrapper">
+                                <div class="btn btn-d">
+                                    <p><a onclick="doSearch(event)" type="submit" value="send">Send</a></p>
+                                </div>
                             </div>
                         </div>
                 </form>
