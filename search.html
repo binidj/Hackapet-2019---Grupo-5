@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/style1.css" />
+        <link rel="stylesheet" href="css/results.css">
         <meta charset="utf-8" />
         <script src="firstscript.js" type="text/javascript"></script>
     </head>
@@ -23,7 +24,7 @@
                                 <li>   
                                     <label for="auditivo">
                                         <input type="checkbox" name="auditivo" id="auditivo" value="auditivo">
-                                        <img class="cara" src="img/auditivo.png" alt="deficiente auditivo" title="Deficiente Auditivo" />
+                                        <img class="cara" src="img/orelha.png" alt="deficiente auditivo" title="Deficiente Auditivo" />
                                     </label>
                                 </li>
                                 <li>
@@ -75,8 +76,10 @@
                         <div class="line">
                             <input id="estabelecimento" type="text" placeholder="Vai pra onde, bença?" />
                         </div>
-                        <div class="line">
-                            <input onclick="doSearch(event)" type="submit" value="Send" />
+                        <div class="wrapper">
+                            <div class="btn btn-d">
+                                <input onclick="doSearch(event)" type="submit" value="Send" />
+                            </div>
                         </div>
                 </form>
             </div>

@@ -39,7 +39,7 @@ body{
 .row{
     opacity: 0.3;
     margin-top:0;
-    background: url(show-bar.png);
+    background: url(../img/show-bar.png);
     background-repeat: repeat-x;
     padding: 70px;
 }
@@ -83,7 +83,7 @@ body{
     overflow: hidden;
 }
 
-.btn > p {
+.btn > input {
     text-align: center;
     text-transform: uppercase;
     color: black;
