@@ -13,6 +13,7 @@ function doSearch(event) {
     }
     let url = []
     let responses =[]
+    let count = 0
     if(document.getElementById("visual").checked){
         url.push('http://localhost:3000/est?option=visao&tipo='+lugar)
     }
@@ -35,7 +36,6 @@ function doSearch(event) {
     }
 
     console.log("fez uma request para: " + url[0])
-    console.log(url[0])
     for (i = 0; i < url.length; i++) {
         fetch(url[i], {
             method: 'GET',
@@ -45,9 +45,15 @@ function doSearch(event) {
             },
         }).then(res => res.json())
             .then(/*Objeto que vai ser usado */ data =>  {
-                console.log(data)
-        // quando a resposta chegar do servidor
+                count--
+                responses.push(data)
+                if (count == 0) {
+                    
+                    console.log(responses)
+                }
+                
         });
+        count++
     }
 }
 
