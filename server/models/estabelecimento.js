@@ -1,5 +1,78 @@
 let axios = require('axios')
-let ests = []
+let ests = [
+    {
+    loja: "loja amor",
+        endereco: {
+            localizacao : "Rua josé aníbal",
+            cidade: "recife"
+        },
+        email: "andre@gmail.com",
+        tipo: "visao",
+        estabelecimento: "restaurante",
+        valor: "50",
+        nota: {
+            votos: 0,
+            notaADM: 0.0,
+            notaSomatorio: 0.0,
+            notaPub: 0.0
+        },
+        cnpj: 400
+},
+{
+    loja: "loja amor",
+        endereco: {
+            localizacao : "Rua josé aníbal",
+            cidade: "recife"
+        },
+        email: "andre@gmail.com",
+        tipo: "audicao",
+        estabelecimento: "restaurante",
+        valor: "50",
+        nota: {
+            votos: 0,
+            notaADM: 0.0,
+            notaSomatorio: 0.0,
+            notaPub: 0.0
+        },
+        cnpj: 401
+},
+{
+    loja: "loja amor",
+        endereco: {
+            localizacao : "Rua josé aníbal",
+            cidade: "recife"
+        },
+        email: "andre@gmail.com",
+        tipo: "cadeirante",
+        estabelecimento: "restaurante",
+        valor: "50",
+        nota: {
+            votos: 0,
+            notaADM: 0.0,
+            notaSomatorio: 0.0,
+            notaPub: 0.0
+        },
+        cnpj: 402
+},
+{
+    loja: "loja amor",
+        endereco: {
+            localizacao : "Rua josé aníbal",
+            cidade: "recife"
+        },
+        email: "andre@gmail.com",
+        tipo: "idoso",
+        estabelecimento: "restaurante",
+        valor: "50",
+        nota: {
+            votos: 0,
+            notaADM: 0.0,
+            notaSomatorio: 0.0,
+            notaPub: 0.0
+        },
+        cnpj: 402
+}
+]
 
 function media(notaGeral,votos) {
     return (notaGeral)/votos
