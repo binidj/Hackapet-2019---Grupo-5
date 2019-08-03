@@ -48,11 +48,3 @@ body{
 .col12{
     width: 940px;
 }
-.main{
-    position: absolute;
-    bottom: 10px;
-    width: 55%;
-}
-.pos{
-    float: left;
-}

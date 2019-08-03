@@ -4,15 +4,15 @@ body{
 
 ul{
     list-style: none;
-    
 }
 li{
-    margin: 16px;
-    margin-right: 20px;
+    width: 140px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
 }
 img{
-    width: 80px;
-    padding:10px;
+    width: 60px;
 }
 label > input{
     visibility: hidden;
@@ -55,17 +55,9 @@ input[type=text]{
 }
 
 .local img{
-    width: 80px;
+    width: 60px;
 }
 
-#upper-side #bottomline{
-    padding: 32px;
-    /*background-image: linear-gradient(#b3e6ff,white);*/
-}
-
-#search{
-    margin-top: 20%;
-}
 .wrapper{
     display: inline;
     padding: 0 10px;
@@ -116,11 +108,13 @@ input[type=text]{
     left: 0;
 }
 
-.btn:hover p{
+.botaoprocurar .btn:hover p{
     color: white;
 }
 .auxgrid{
-    height: 340px;
+     margin-right: auto;
+     margin-left: auto;
+     display: block;
 }
 a{
     text-decoration: none;
@@ -129,5 +123,18 @@ a{
 
 .btn .btn-d {
     width: 5000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.mark{
+    margin-right: 8%;
+    margin-left: 18%;
 }
 
+.botaoprocurar{
+    margin-left: 360px;
+}
+.btn:hover a{
+    color: white;
+}
